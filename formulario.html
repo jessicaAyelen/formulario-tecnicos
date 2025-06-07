@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro Técnico</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 500px; margin: auto; }
+    label, input, select, textarea { display: block; margin-top: 10px; width: 100%; }
+    button { margin-top: 15px; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Formulario de Servicio Técnico</h2>
+
+  <label>Establecimiento
+    <input type="text" id="establecimiento" maxlength="50" required>
+  </label>
+
+  <label>Técnico
+    <input type="text" id="tecnico" maxlength="20" required>
+  </label>
+
+  <label>Zona
+    <select id="zona" required>
+      <option value="">Seleccionar...</option>
+      <option value="Norte">Norte</option>
+      <option value="Sur">Sur</option>
+      <option value="Este">Este</option>
+      <option value="Oeste">Oeste</option>
+      <option value="Noroeste">Noroeste</option>
+      <option value="Sureste">Sureste</option>
+      <option value="Suroeste">Suroeste</option>
+    </select>
+  </label>
+
+  <label>Descripción
+    <textarea id="descripcion" rows="3" required></textarea>
+  </label>
+
+  <label>Observaciones
+    <textarea id="observaciones" rows="2"></textarea>
+  </label>
+
+  <p id="cronometro">Tiempo: 00:00:00</p>
+
+  <button onclick="iniciarTrabajo()" id="btnInicio">Iniciar trabajo</button>
+  <button onclick="finalizarTrabajo()">Finalizar trabajo</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
